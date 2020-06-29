@@ -1,0 +1,52 @@
+{
+  "hdrTableData": {
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "type": "selection"
+      },{
+        "prop": "index",
+        "label": "序号",
+        "fixed": true,
+        "width": "50px"
+      },
+      {
+        "prop": "formno",
+        "label": "进仓单号",
+				"fixed": true,
+				"width": "165px"
+      },
+      {
+        "prop": "kind",
+        "label": "进仓类型"
+      },
+      {
+        "prop": "operatorName",
+        "label": "进仓人"
+      },
+      {
+        "prop": "operationDate",
+        "label": "进仓日期"
+      },
+      {
+        "prop": "storeName",
+        "label": "进仓仓库"
+      },
+      {
+        "prop": "status",
+        "label": "进仓单状态"
+      },
+      {
+        "prop": "description",
+        "label": "备注"
+      }
+    ]
+  }
+
+}

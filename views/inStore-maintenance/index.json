@@ -1,0 +1,77 @@
+{
+  "apiName":"warehouse",
+  "hdrFormItems": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "进仓单号",
+      "name": "formno",
+      "inputStyle": "width:182px",
+      "readonly": true
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "进仓类型",
+      "name": "kind",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "options": [{
+        "value": "采购到货进仓"
+      }],
+      "rules": {
+        "required": true,
+        "message": "进仓类型不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "date",
+      "value": "",
+      "label": "进仓日期",
+      "name": "operationDate",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "rules": {
+        "required": true,
+        "message": "入库日期不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "仓库",
+      "name": "whid",
+      "inputStyle": "width:182px",
+      "options": [],
+      "rules": {
+        "required": true,
+        "message": "仓库不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "textarea",
+      "value": "",
+      "label": "备注",
+      "name": "description",
+      "style": "width:100%",
+      "inputStyle": "width:465px",
+      "readonly": false
+    }]
+  },
+  "备用":[{
+    "type": "mixInput",
+    "value": "",
+    "label": "进仓申请单",
+    "name": "pformno",
+    "buttonDisabled": false,
+    "readonly": true,
+    "loading": false,
+    "filterable": true,
+    "rules": {
+      "required": true,
+      "message": "进仓申请单不能为空",
+      "trigger": "change"
+    }
+  }]
+}

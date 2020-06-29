@@ -1,0 +1,24 @@
+{
+  "buttons": [{
+    "text": "查询",
+    "size": "mini",
+    "icon": "#iconchaxun",
+    "disabled": false,
+    "controlDisable": "",
+    "key": "query"
+  }, {
+    "text": "打印",
+    "size": "mini",
+    "icon": "#icondayin",
+    "disabled": false,
+    "controlDisable": "",
+    "key": "print-btn"
+  }, {
+    "text": "导出",
+    "size": "mini",
+    "icon": "#icondaochuwenjian",
+    "disabled": false,
+    "controlDisable": "",
+    "key": "output"
+  }]
+}

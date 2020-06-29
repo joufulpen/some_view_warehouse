@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>到货单维护</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+
+    #main .cool-form {
+      padding-top: 2px !important;
+    }
+
+    .cool-form .el-form-item {
+      margin-bottom: 2px
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <script src="/settings.js"></script>
+
+</head>
+
+
+<body>
+  <div id="root" v-cloak>
+    <el-container v-loading="loading">
+      <el-main id="main">
+        <!-- <el-header height="auto"> -->
+        <div>{{hdrTitle}}</div>
+        <el-form inline size="mini" label-width="100px" style="padding-top:2px">
+          <el-form-item label="采购订单号">
+            <el-input v-model="hdrPartOneForm.purchaseOrderNo" disabled style="width:193px">
+              <el-button slot="append" icon="el-icon-search" @click="inputBtnEvent" :disabled="purchaseOrderNoBtnDisabled"></el-button>
+            </el-input>
+          </el-form-item>
+          <el-form-item label="采购到货单号">
+            <el-input v-model="hdrPartOneForm.formno" disabled style="width:193px"></el-input>
+          </el-form-item>
+        </el-form>
+        <cool-form-view ref="hdrFormItems" :form-items="hdrFormItems" @update-form="updateHdrForm" inline label-width="100px"></cool-form-view>
+        <el-button-group v-if="status !== 'check'">
+          <el-button size="mini" @click="addMaterialBtn" :disabled="hdrPartOneForm.purchaseOrderNo.length==0">选择物料</el-button>
+          <el-button size="mini" @click="removeMaterialBtn" :disabled="currentSelectedDetail.length==0">移除物料</el-button>
+          <el-button size="mini" @click="editMaterialBtn" :disabled="currentSelectedDetail.length==0">编辑物料</el-button>
+        </el-button-group>
+        <!-- <cool-form-view v-if="status !== 'check'" :form-items="dltFormItems" @update-form="updateDltForm" inline label-width="100px" @keyup-enter="confirmBtn" @button-click="submit">
+        </cool-form-view> -->
+        <cool-table-view ref="dataTable" :data="data" :columns="columns" @table-row-click="rowClick" :highlight-current-row="true" @table-selection-change="detailSelection" @table-row-dblclick="rowDblClick"></cool-table-view>
+      </el-main>
+    </el-container>
+
+    <cool-just-dialog ref="editDialog" title="选取物料" :visible.sync="showMaterialDialog" width="800px" @save-event="confirmMaterial" @back-event="showMaterialDialog = false" :save-btn-disabled="currentSelectedMaterial.length==0" @closedialog="dialogClose"
+      :show-save-button="true">
+      <template slot="dialogSlot">
+        <div style="border: 1px solid #DCDFE6">
+          <cool-table-view ref="materialTable" :data="materialData" :columns="materialColumns" @table-selection-change="materialSelection" @table-row-click="materialRowClick"></cool-table-view>
+        </div>
+      </template>
+    </cool-just-dialog>
+    <cool-quick-edit ref="quickEdit" :visible.sync="quickDialogVisible" :form-items="quickCoolFormItems" :width="dialogWidth" :label-width="labelWidth" :all-data="data" :current-edit-data="currentEditData" @quick-save-event="quickSaveEvent"></cool-quick-edit>
+  </div>
+
+</body>
+
+</html>

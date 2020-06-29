@@ -1,0 +1,107 @@
+{
+  "apiName":"warehouse",
+  "formItems": {
+    "form": [{
+        "type": "select",
+        "value": "",
+        "label": "仓库名称",
+        "name": "whid",
+        "options": [],
+        "style": {
+          "width": "33.3%"
+        },
+        "rules": {
+          "required": true,
+          "message": "此项不能为空",
+          "trigger": "change"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "行",
+        "name": "row",
+        "disabled": false,
+        "style": {
+          "width": "33.3%"
+        },
+        "rules": {
+          "pattern": "^[0-9]*$",
+          "message": "输入格式有误"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "列",
+        "name": "col",
+        "disabled": false,
+        "style": {
+          "width": "33.3%"
+        },
+        "rules": {
+          "pattern": "^[0-9]*$",
+          "message": "输入格式有误"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "层",
+        "name": "layer",
+        "disabled": false,
+        "style": {
+          "width": "33.3%"
+        },
+        "rules": {
+          "pattern": "^[0-9]*$",
+          "message": "输入格式有误"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "简码",
+        "name": "shortCode",
+        "disabled": false,
+        "style": {
+          "width": "33.3%"
+        },
+        "rules": {
+          "required": true,
+          "message": "此项不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "select",
+        "value": "",
+        "label": "状态",
+        "name": "active",
+        "options": [{
+          "value": true,
+          "label": "启用"
+        }, {
+          "value": false,
+          "label": "停用"
+        }],
+        "style": {
+          "width": "33.3%"
+        },
+        "rules": {
+          "required": true,
+          "message": "此项不能为空",
+          "trigger": "change"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "style": {
+          "width": "33.3%"
+        }
+      }
+    ]
+  }
+}

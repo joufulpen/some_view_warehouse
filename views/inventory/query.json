@@ -1,0 +1,92 @@
+{
+  "queryCondition": {
+    "id": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "id",
+      "tableRelationMode": "AND",
+      "tableName": "[StockAttribute]",
+      "name": "编号",
+      "form": "input"
+    },
+    "kind": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "kind",
+      "tableRelationMode": "AND",
+      "tableName": "[StockAttribute]",
+      "name": "类型",
+      "form": "input"
+    },
+    "materialClass": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "materialClass",
+      "tableRelationMode": "AND",
+      "tableName": "[StockAttribute]",
+      "name": "大类",
+      "form": "input"
+    },
+    "materialSubClass": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "materialSubClass",
+      "tableRelationMode": "AND",
+      "tableName": "[StockAttribute]",
+      "name": "小类",
+      "form": "input"
+    },
+    "name": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "name",
+      "tableRelationMode": "AND",
+      "tableName": "[StockAttribute]",
+      "name": "名称",
+      "form": "input"
+    },
+    "brandModel": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "brandModel",
+      "tableRelationMode": "AND",
+      "tableName": "[StockAttribute]",
+      "name": "型号",
+      "form": "input"
+    },
+    "specifications": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "specifications",
+      "tableRelationMode": "AND",
+      "tableName": "[StockAttribute]",
+      "name": "规格",
+      "form": "input"
+    },
+    "pigment": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "pigment",
+      "tableRelationMode": "AND",
+      "tableName": "[StockAttribute]",
+      "name": "颜色",
+      "form": "input"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "hdrTableData": {
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "type": "selection"
+      },{
+        "type": "index",
+        "label": "序号",
+        "fixed": true,
+        "width": "50px"
+      },
+      {
+        "prop": "name",
+        "label": "名称"
+      },
+      {
+        "prop": "code",
+        "label": "编码"
+      },
+      {
+        "prop": "location",
+        "label": "位置"
+      },
+      {
+        "prop": "description",
+        "label": "备注"
+      }
+    ]
+  }
+
+}

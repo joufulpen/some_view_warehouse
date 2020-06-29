@@ -1,0 +1,66 @@
+{
+  "buttons": [{
+      "text": "查询",
+      "size": "mini",
+      "icon": "#iconchaxun",
+      "disabled": false,
+      "controlDisable": "",
+      "key": "query"
+    },
+    {
+      "text": "查看",
+      "size": "mini",
+      "icon": "#iconchakan",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "detail-btn"
+    },
+    {
+      "text": "新建",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "disabled": false,
+      "controlDisable": "",
+      "key": "new-btn"
+    },
+    {
+      "text": "编辑",
+      "size": "mini",
+      "icon": "#iconERP_bianji",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "edit-btn"
+    },
+    {
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "delete"
+    },
+    {
+      "text": "确认",
+      "size": "mini",
+      "icon": "#iconqueren",
+      "disabled": true,
+      "controlDisable": "",
+      "key": "confirm-btn"
+    },
+    {
+      "text": "拒收",
+      "size": "mini",
+      "icon": "#iconxianshizhongzhi",
+      "disabled": true,
+      "controlDisable": "",
+      "key": "refuse-btn"
+    }, {
+      "text": "导出",
+      "size": "mini",
+      "icon": "#icondaochuwenjian",
+      "disabled": false,
+      "controlDisable": "",
+      "key": "output"
+    }
+  ]
+}

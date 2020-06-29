@@ -1,0 +1,49 @@
+{
+  "hdrTableData": {
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "type": "selection"
+      },
+      {
+        "prop": "formno",
+        "label": "到货单号",
+				"fixed": true,
+				"width": "165px"
+      },
+      {
+        "prop": "purchaseOrderNo",
+        "label": "采购订单号"
+      },
+      {
+        "prop": "status",
+        "label": "到货单状态"
+      },
+      {
+        "prop": "receiverName",
+        "label": "收货人"
+      },
+      {
+        "prop": "arrivalTime",
+        "label": "到货时间",
+        "dateFormatter": true
+      },
+      {
+        "prop": "confirmTime",
+        "label": "进仓时间",
+        "dateFormatter": true
+      },
+      {
+        "prop": "description",
+        "label": "备注"
+      }
+    ]
+  }
+
+}

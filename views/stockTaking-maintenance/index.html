@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>录入盘点数</title>
+  <!-- <script src="../../scripts/cool-master/cool-master.js"></script> -->
+  <script>
+    window.coolLocals = {}
+  </script>
+  <script src="/settings.js"></script>
+</head>
+
+<style>
+  .el-table--scrollable-x .el-table__body-wrapper {
+    overflow-x: auto;
+    height: 94%;
+  }
+</style>
+
+<body>
+  <div id="root" v-cloak>
+    <el-container ref="container">
+      <el-header height="auto">
+        <cool-button-group :buttons="buttons" @button-click="buttonsevent"></cool-button-group>
+      </el-header>
+      <el-main>
+        <!-- <div style="height:100%"> -->
+        <el-container>
+          <cool-query ref="coolQuery" :origin-condition="originCondition" @get-condition="getCondition"></cool-query>
+          <el-main>
+            <el-container>
+              <el-main>
+                <el-table height="100%" v-loading="waiting" :data="rawData" border fit stripe highlight-current-row>
+                  <el-table-column v-for="(column,index) in productColumns" :prop="column.prop" :label="column.label" :width="column.width" :key="index" :type="column.type">
+                  </el-table-column>
+                  <el-table-column v-for="(columnA,index) in productColumns1" :prop="columnA.prop" :label="columnA.label" :width="columnA.width" :key="`B-${index}`" :type="columnA.type">
+                    <template slot-scope="scope">
+                      <!-- <el-input class="onlyInput" ref="inputArray" type="number" size="mini" v-model="scope.row.checkNum" min="0" @keyup.enter.native="focusNextInput($event)" @keyup.down.native=""></el-input> -->
+                      <el-input-number ref="inputArray" size="mini" v-model="scope.row.checkNum" :min="0" @keyup.enter.native="focusNextInput($event)" @keyup.down.native=""></el-input-number>
+                    </template>
+                  </el-table-column>
+                  <el-table-column v-for="(columns,index) in productColumns2" :prop="columns.prop" :label="columns.label" :width="columns.width" :key="`A-${index}`" :type="columns.type">
+                    </el-table-columns>
+                </el-table>
+              </el-main>
+              <el-footer height="auto">
+                <el-pagination :total="total" :layout="layout" :page-size.sync="pagination.pageSize" :current-page.sync="pagination.page" @size-change="paginationSizeChange" @current-change="paginationCurrentChange" style="border: 1px solid #DCDFE6;"></el-pagination>
+                <!-- <div class="custom-maintainence-footer" style="border-left:1px solid #DCDFE6"> -->
+                <!-- <el-button type="success" size="medium" @click="saveEditData">保存</el-button>
+                  <el-button plain size="medium" @click="cancelClick" style="margin-left:60px">取消</el-button> -->
+                <!-- <cool-save-button save-btn-text="保 存" back-btn-text="取 消" @save-event="saveEditData" @back-event="cancelClick"></cool-save-button> -->
+                <!-- </div> -->
+              </el-footer>
+            </el-container>
+          </el-main>
+        </el-container>
+        <!-- </div> -->
+      </el-main>
+    </el-container>
+  </div>
+
+</body>
+
+</html>

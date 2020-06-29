@@ -1,0 +1,73 @@
+{
+  "columns": [{
+      "type": "selection"
+    }, {
+      "label": "序号",
+      "type": "index",
+      "width": "50px"
+    }, {
+      "label": "编号",
+      "prop": "code"
+    },
+    {
+      "label": "名称",
+      "prop": "name"
+    },
+    {
+      "label": "规格",
+      "prop": "specifications"
+    },
+    {
+      "label": "采购单位",
+      "prop": "unit"
+    },
+    {
+      "label": "本次到货数量",
+      "prop": "qty"
+    },
+    {
+      "label": "到货单价",
+      "prop": "price"
+    },
+    {
+      "label": "订单数量",
+      "prop": "num1"
+    }, {
+      "label": "累计到货数量",
+      "prop": "num2"
+    }, {
+      "label": "剩余到货",
+      "prop": "num3"
+    }, {
+      "label": "备注",
+      "prop": "description"
+    }
+  ],
+  "materialColumns": [{
+      "type": "selection"
+    },
+    {
+      "prop": "code",
+      "label": "编号"
+    },{
+      "prop": "name",
+      "label": "名称"
+    },{
+      "prop": "specifications",
+      "label": "规格"
+    },
+    {
+      "prop": "qty",
+      "label": "数量"
+    }, {
+      "prop": "price",
+      "label": "单价"
+    }, {
+      "prop": "amount",
+      "label": "金额"
+    }, {
+      "prop": "description",
+      "label": "备注"
+    }
+  ]
+}

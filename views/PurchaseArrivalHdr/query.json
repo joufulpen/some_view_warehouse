@@ -1,0 +1,82 @@
+{
+  "queryCondition": {
+    "formno": {
+      "value": "",
+      "mode": "相似",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "formno",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "到货单号",
+      "form": "input"
+    },
+    "purchaseOrderNo": {
+      "value": "",
+      "mode": "相似",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "purchaseOrderNo",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "采购订单号",
+      "form": "input"
+    },
+    "status": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "status",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "到货单状态",
+      "form": "select",
+      "options": [{
+        "value": "0",
+        "label": "新建"
+      }, {
+        "value": "1",
+        "label": "已确认"
+      }, {
+        "value": "2",
+        "label": "已完成"
+      }]
+    },
+    "receiver": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "filterable": true,
+      "dataType": "string",
+      "fieldName": "receiver",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "到货人",
+      "form": "select",
+      "options": []
+    },
+    "arrivalTime": {
+      "value": ["", ""],
+      "mode": "之间",
+      "modeList": [],
+      "dataType": "date",
+      "fieldName": "arrivalTime",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "到货日期",
+      "form": "date"
+    },
+    "confirmTime": {
+      "value": ["", ""],
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "date",
+      "fieldName": "confirmTime",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "进仓日期",
+      "form": "date"
+    }
+  }
+}

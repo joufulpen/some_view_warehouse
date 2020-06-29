@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>库存盘点</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+
+    .el-table--border th:first-child .cell {
+      display: none
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <script type="post-load" src="../libs/xlsx-populate-no-encryption.min.js"></script>
+  <script src="/settings.js"></script>
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <div id="root" v-cloak>
+    <cool-single-view ref="singleView" :axios-setting="axiosSetting" :buttons="buttons" :single-table-data="singleTableData" :query-condition="queryCondition" :is-methods="isMethods" :dialogs="dialogs" @get-condition="getCondition"
+      @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @table-selection-change="tableSelectionChange" @table-row-click="tableRowClick" @query-btn="queryData" @new-btn="newData" @import-btn="importData"
+      @edit-btn="editData" @confirm-btn="confirmData" @adjust-btn="adjustData" @delete-btn="deleteData" @save-event="dialogSaveEvent" @back-event="dialogBackEvent"></cool-single-view>
+
+    <cool-just-dialog :visible.sync="newStockCount.dialogVisible" :collapsed.sync="newStockCount.collapsed" :fullscreen.sync="newStockCount.fullscreen" width="540px" top="3vh" title="新建盘点计划" :show-save-button="true" @closedialog="newStockCountDialogClose"
+      @back-event="newStockCount.dialogVisible = false" @save-event="createStockCount">
+      <template slot="dialogSlot">
+        <cool-form-view ref="stockCountForm" :form-items="stockCountForm" @update-form="updateStockCountForm" size="mini" :inline="true" label-width="100px"></cool-form-view>
+      </template>
+    </cool-just-dialog>
+
+    <!-- 上传弹窗 -->
+    <el-dialog title="盘点导入" :visible="importVisible" :close-on-click-modal="false" @close="importDialogClose" width="440px" v-loading="dialogLoading">
+      <el-row v-if="importVisible">
+        <el-col :span="16">
+          <el-card shadow="never" style="height: 100px;width:250px;">
+            <el-upload ref="upload" action="" :auto-upload="false" :multiple="false" :limit="2" :on-change="handleChange" :on-remove="handleRemove" :file-list="uploadlist">
+              <el-button size="mini" type="primary">选择文件</el-button>
+            </el-upload>
+          </el-card>
+        </el-col>
+        <el-col :span="8" style="text-align:center">
+          <el-button @click="templateDownload" type="success">模板下载</el-button>
+          <el-button :disabled="uploadlist.length == 0" @click="btnImport_click" type="success" style="margin:20px">导入</el-button>
+        </el-col>
+      </el-row>
+    </el-dialog>
+    <!-- <cool-views :buttons="buttons" @button-click="buttonsevent" :show-query="showQuery" :origin-condition="originCondition" @get-condition-ware="getCondition" :hdr-table-data="hdrTableData" @hdr-pagination-size-change="paginationSizeChange"
+      @hdr-pagination-current-change="paginationCurrentChange" @hdr-select-change="selection" :dialogs="dialogs"></cool-views> -->
+
+    <!-- <cool-edit-dialog :visible.sync="dialogVisible" :width="width" :edit-dialog-title="dialigTitle" @closedialog="dialogclose" @input-button-event="inputbuttonevent" :form-items="checkPlanForm" :label-width="labelWidth" @save-event="saveData"></cool-edit-dialog> -->
+  </div>
+</body>
+
+</html>

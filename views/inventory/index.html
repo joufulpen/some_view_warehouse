@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- title为变量 是模块的名字 -->
+  <title>库存管理</title>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <!-- <script src="../../scripts/new-cool-master/cool-master.js"></script> -->
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <cool-single-view ref="singleView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :show-mode-list="showModeList" :is-methods="isMethods" @table-row-click="tableRowClick" @table-row-dblclick="tableRowDblclick"
+      @table-selection-change="tableSelectionChange" @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @get-condition="getCondition" @query-btn="queryData" @print-btn="printData"></cool-single-view>
+
+  </div>
+</body>
+
+</html>

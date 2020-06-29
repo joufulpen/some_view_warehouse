@@ -1,0 +1,289 @@
+{
+  "apiName":"warehouse",
+  "editDialogTitle": "xxxxDialog",
+  "width": "700px",
+  "labelWidth": "80px",
+    "editTableData": {
+    "showPage": false,
+    "height": "200px",
+    "columns": [
+      {
+        "prop": "code",
+        "label": "code"
+      },
+      {
+        "prop": "qty",
+        "label": "qty"
+      }
+    ],
+    "data": [ ]
+  },
+  "toolsFormItems": {
+    "form": [
+      {
+        "type": "input",
+        "value": "",
+        "label": "备注",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "description"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "主键",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "sn"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "编码",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "code"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "对冲标记",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "tag"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "种类",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "kind"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "仓库id",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "whid"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "parentSn",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "parentSn"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "targetTable",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "targetTable"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "名称",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "name"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "单号",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "formno"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "数量",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "qty"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "剩余量",
+        "inputStyle": {
+          "width": "150px",
+          "marginRight": "5px"
+        },
+        "name": "leave"
+      },
+      {
+        "type": "button",
+        "buttons": [
+          {
+            "text": "提交",
+            "size": "mini",
+            "disabled": true,
+            "key": "submit"
+          },
+          {
+            "text": "取消",
+            "size": "mini",
+            "disabled": true,
+            "key": "cancel"
+          },
+          {
+            "text": "删除",
+            "size": "mini",
+            "disabled": true,
+            "key": "delete"
+          }
+        ]
+      }
+    ]
+  },
+  "formItems": {
+    "form": [
+      {
+        "type": "input",
+        "value": "",
+        "label": "单号",
+        "name": "formno",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "确认日期",
+        "name": "confirmTime",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "确认人",
+        "name": "confirmBy",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "审核状态",
+        "name": "status",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "操作日期",
+        "name": "operationDate",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "类型",
+        "name": "kind",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "操作人",
+        "name": "operator",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "仓库id",
+        "name": "whid",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "采购单号",
+        "name": "purchaseOrderNo",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "收货人",
+        "name": "receiver",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "发货人",
+        "name": "deliveryMan",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "到货时间",
+        "name": "arrivalTime",
+        "style": {
+          "width": "50%"
+        }
+      }
+    ]
+  }
+}

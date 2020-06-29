@@ -1,0 +1,25 @@
+{
+  "apiName": "warehouse",
+  "stockCountForm":{
+    "form":[{
+      "type": "select",
+      "value": "",
+      "label": "盘点仓库",
+      "name": "whid",
+      "options": [],
+      "style": "",
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "textarea",
+      "value": "",
+      "label": "备注",
+      "name": "description",
+      "style": "width:100%",
+      "inputStyle": "width:300px"
+    }]
+  }
+}

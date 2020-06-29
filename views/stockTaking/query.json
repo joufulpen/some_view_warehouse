@@ -1,0 +1,71 @@
+{
+  "queryCondition": {
+    "formno": {
+      "value": "",
+      "mode": "相似",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "formno",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "盘点表编号",
+      "form": "input"
+    },
+    "createDate": {
+      "value": ["", ""],
+      "mode": "之间",
+      "modeList": [],
+      "dataType": "date",
+      "fieldName": "createDate",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "盘点时间",
+      "form": "date"
+    },
+    "whid": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "whid",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "盘点仓库",
+      "form": "select",
+      "options": []
+    },
+    "status": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "status",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "盘点状态",
+      "form": "select",
+      "options": [{
+        "value": "0",
+        "label": "新建"
+      }, {
+        "value": "1",
+        "label": "已确定"
+      }, {
+        "value": "2",
+        "label": "已调账"
+      }]
+    },
+    "confirmBy": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "confirmBy",
+      "tableRelationMode": "AND",
+      "tableName": "[Hdr]",
+      "name": "盘点入库确认人",
+      "form": "select",
+      "options": []
+    }
+  }
+}

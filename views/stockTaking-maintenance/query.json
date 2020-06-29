@@ -1,0 +1,26 @@
+{
+  "originCondition": {
+    "name": {
+      "value": "",
+      "mode": "相似",
+      "modeList": [],
+      "dataType": "string",
+      "name": "物料名称",
+      "fieldName": "name",
+      "form": "input",
+      "tableRelationMode": "AND",
+      "tableName": "[Dtl]"
+    },
+    "code": {
+      "value": "",
+      "mode": "相似",
+      "modeList": [],
+      "dataType": "string",
+      "name": "物料编码",
+      "fieldName": "code",
+      "form": "input",
+      "tableRelationMode": "AND",
+      "tableName": "[Dtl]"
+    }
+  }
+}

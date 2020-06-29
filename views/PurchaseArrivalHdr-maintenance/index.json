@@ -1,0 +1,126 @@
+{
+  "apiName": "warehouse",
+  "hdrFormItems": {
+    "form": [{
+        "type": "select",
+        "value": "",
+        "label": "选择仓库",
+        "name": "whid",
+        "style": "margin-right: 5px;",
+        "inputStyle": "width:193px",
+        "clearable": false,
+        "disabled": false,
+        "options": [],
+        "rules": {
+          "required": true,
+          "message": "此项不能为空",
+          "trigger": "change"
+        }
+      },
+      {
+        "type": "select",
+        "value": "",
+        "label": "收货人",
+        "name": "receiver",
+        "style": "margin-right: 5px;",
+        "inputStyle": "width:193px",
+        "readonly": false,
+        "disabled": false,
+        "options": [],
+        "rules": {
+          "required": true,
+          "message": "此项不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "送货人",
+        "name": "deliveryMan",
+        "style": "margin-right: 5px;",
+        "inputStyle": "width:193px",
+        "readonly": false,
+        "disabled": false
+      }, {
+        "type": "date",
+        "value": "",
+        "label": "到货时间",
+        "name": "arrivalTime",
+        "style": "margin-right: 5px;",
+        "inputStyle": "width:193px",
+        "readonly": false,
+        "disabled": false
+      }, {
+        "type": "textarea",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "style": "width:100%",
+        "inputStyle": "width:492px",
+        "readonly": false,
+        "disabled": false
+      }
+    ]
+  },
+  "quickCoolFormItems": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "编号",
+      "disabled": true,
+      "readonly": true,
+      "name": "code",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "名称",
+      "disabled": true,
+      "readonly": true,
+      "name": "name",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "规范",
+      "disabled": true,
+      "readonly": true,
+      "name": "specifications",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "inputNumber",
+      "value": "",
+      "label": "本次到货数量",
+      "min": 0,
+      "precision": 2,
+      "disabled": false,
+      "readonly": false,
+      "name": "qty",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "inputNumber",
+      "value": "",
+      "label": "到货总价",
+      "min": 0,
+      "precision": 2,
+      "disabled": false,
+      "readonly": false,
+      "name": "localTotalPrice",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "备注",
+      "disabled": false,
+      "readonly": false,
+      "name": "description",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }]
+  }
+}

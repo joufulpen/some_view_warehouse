@@ -1,0 +1,47 @@
+{
+  "dtlTableData": [{
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "name": "first",
+    "label": "出仓明细",
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "type": "index",
+        "label": "序号",
+        "fixed": "fixed",
+        "width": "50px"
+      },
+      {
+        "prop": "code",
+        "label": "产品编码",
+        "fixed": "fixed",
+        "width": "150px"
+      },
+      {
+        "prop": "name",
+        "label": "名称"
+      },
+      {
+        "prop": "specifications",
+        "label": "规格"
+      },
+      {
+        "prop": "qty",
+        "label": "出库数量"
+      },
+      {
+        "prop": "stockKeepingUnit",
+        "label": "库存单位"
+      },
+      {
+        "prop": "description",
+        "label": "备注"
+      }
+    ]
+  }]
+}

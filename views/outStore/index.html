@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>出仓管理</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+    window.extraJsons = ['dtlTable.json']
+  </script>
+  <script type="post-load" src="../libs/xlsx-populate-no-encryption.min.js"></script>
+  <script src="/settings.js"></script>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <div id="root" v-cloak>
+    <cool-master-view ref="masterView" :buttons="buttons" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :hdr-table-data="hdrTableData" :dtl-table-data="dtlTableData" :query-condition="queryCondition" :is-methods="isMethods"
+      :dialogs="dialogs" @get-condition="getCondition" @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @remote-method="remoteMethod" @table-row-click="handleRowClick" @print-btn="printData" @output="output"
+      @save-event="dialogSaveEvent" @back-event="dialogBackEvent"></cool-master-view>
+    <!-- @search-btn="searchData" @new-btn="newData" -->
+    <!-- @table-select-change="selection" -->
+    <!-- <cool-views ref="testTable" :buttons="buttons" @button-click="buttonsevent" :origin-condition="originCondition" @get-condition-ware="getCondition" :hdr-table-data="hdrTableData" :dlt-table-data="dltTableData" @hdr-page-size-change="paginationSizeChange"
+      @hdr-pagination-current-change="paginationCurrentChange" @hdr-select-change="selection" @hdr-row-click="handleRowClick" :dialogs="dialogs"></cool-views> -->
+  </div>
+</body>
+
+</html>
+
+<!-- ,
+{
+  "text": "新建",
+  "size": "mini",
+  "icon": "el-icon-plus",
+  "disabled": false,
+  "controlDisable": "",
+  "key": "new-btn"
+} -->

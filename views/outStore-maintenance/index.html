@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>新建/编辑/查看出仓单</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script src="../../scripts/cool-master/cool-master.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <el-container>
+      <el-header height="auto">
+        <div>{{hdrTitle}}</div>
+        <cool-form-views ref="hdrFormItems" :form-items="hdrFormItems" @update-form="updateHdrForm" inline label-width="100px" @input-button-event="inputBtnEvent"></cool-form-views>
+        <el-divider></el-divider>
+        <cool-form-views :form-items="dltFormItems" @update-form="updateDltForm" inline label-width="100px" @keyup-enter="confirmBtn" style="padding:0">
+          <el-form-item slot="addFormItem">
+            <el-button size="mini" type="success" @click="confirmBtn" :disabled="dltFormItems.form.find(p=>p.label=='编号').value.length==0">确认</el-button>
+          </el-form-item>
+        </cool-form-views>
+      </el-header>
+      <el-main style="height:100%">
+        <cool-table-view :data="data" :columns="columns" @table-row-click="rowClick" :highlight-current-row="true"></cool-table-view>
+      </el-main>
+      <el-footer height="auto">
+        <el-button type="danger" size="mini" @click="cancelClick">取消</el-button>
+        <el-button type="success" size="mini" :style="'float:right'" :disabled="data.length == 0" @click="maintainClick">保 存</el-button>
+      </el-footer>
+    </el-container>
+
+    <!-- 发现一个问题 如果cool-new-edit-views设置为单标签 后面的el-dialog是不会响应的 就是你将visible设为true dialog也出不来-->
+    <!-- <cool-new-edit-views ref="content" :hdr-header-text="hdrTitle" :form-items="hdrFormItems" @update-form="updateHdrForm" :dlt-header-text="dltTitle" :new-edit-table-data="newEditTableData" @new-edit-table-buttons-event="buttonsevent"
+      @new-edit-select-change="selection" @cancel-click="cancelClick" @maintain-click="maintainClick" @new-edit-row-dbclick="rowDblclick" :maintain-btn="maintainBtn" :label-width="labelWidth"></cool-new-edit-views> -->
+
+
+
+    <!--  <iframe-maintenance v-loading="waiting" ref="content" :hdr-title="hdrTitle" :form-items="hdrFormItems" @update-form="updateHdrForm" :dlt-title="dltTitle" :buttons="buttons" @button-click="buttonsevent" :data="rawData" :columns="productColumns"
+      @table-selection-change="selection" @cancel-click="cancelClick" @maintain-click="maintainClick" @table-row-dblclick="rowDblclick"></iframe-maintenance> -->
+    <!-- 编辑弹出窗 -->
+    <!-- <el-dialog title="编辑出仓单" :close-on-click-modal="false" :visible.sync="dialogVisible" width="650px">
+      <el-container>
+        <el-form :model="form" :inline="true" size="mini">
+          <el-form-item v-for="(item,key,index) in productColumns.slice(2)" :label="item.label" :key="key" :label-width="formLabelWidth">
+            <el-input v-if="item.prop == 'qty'" v-model="currentLeave" auto-complete="off" autofocus="true" @keyup.enter.native="nextInputData" @keyup.up.native="backUp" @keyup.down.native="backDown"></el-input>
+            <el-input v-else="" disabled :value="item.value" auto-complete="off"></el-input>
+          </el-form-item>
+        </el-form>
+      </el-container>
+      <el-button @click="dialogVisible=false" size="mini" type="danger">取消</el-button>
+      <el-button @click="saveData" size="mini" type="success" style="float:right">确定</el-button>
+    </el-dialog> -->
+
+
+
+
+    <!-- <cool-edit-dialog :edit-dialog-title="editDialogTitle" :form-items="formItems" :visible.sync="dialogVisible" :label-width="formLabelWidth" :width="width" @save-event="saveData" @backEvent="backEvent" @keyup-enter="nextInputData" @keyup-up="backUp"
+      @keyup-down="backDown"></cool-edit-dialog> -->
+  </div>
+
+</body>
+
+</html>

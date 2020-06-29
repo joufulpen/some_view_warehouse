@@ -1,0 +1,51 @@
+{
+  "dtlTableData": [{
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "name": "first",
+    "label": "到货明细",
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "prop": "code",
+        "label": "编号"
+      },
+      {
+        "prop": "name",
+        "label": "名称"
+      },
+      {
+        "prop": "specifications",
+        "label": "规格"
+      },
+      {
+        "prop": "unit",
+        "label": "采购单位"
+      },
+      {
+        "prop": "qty",
+        "label": "本次到货数量"
+      },
+      {
+        "prop": "num2",
+        "label": "累计到货数量"
+      },
+      {
+        "prop": "num3",
+        "label": "剩余到货"
+      },
+      {
+        "prop": "price",
+        "label": "到货单价"
+      },
+      {
+        "prop": "description",
+        "label": "备注"
+      }
+    ]
+  }]
+}

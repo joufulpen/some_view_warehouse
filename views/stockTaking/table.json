@@ -1,0 +1,42 @@
+{
+  "singleTableData": {
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "type": "selection"
+      }, {
+        "label": "序号",
+        "prop": "index",
+        "width": "50px"
+      },
+      {
+        "prop": "createDate",
+        "label": "盘点时间",
+        "dateFormatter": true
+      },
+      {
+        "prop": "storeName",
+        "label": "盘点仓库"
+      },
+      {
+        "prop": "status",
+        "label": "盘点状态"
+      },
+      {
+        "prop": "confirmName",
+        "label": "盘点入库确认人"
+      },
+      {
+        "prop": "description",
+        "label": "备注"
+      }
+    ]
+  }
+
+}

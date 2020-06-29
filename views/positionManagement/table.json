@@ -1,0 +1,50 @@
+{
+  "singleTableData": {
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "type": "selection"
+      },{
+        "label": "序号",
+        "prop": "index",
+        "fixed": true,
+        "width": "50px"
+      },
+      {
+        "prop": "storeName",
+        "label": "仓库名称",
+        "fixed": true
+      },
+      {
+        "prop": "row",
+        "label": "行"
+      },
+      {
+        "prop": "col",
+        "label": "列"
+      },
+      {
+        "prop": "layer",
+        "label": "层"
+      },
+      {
+        "prop": "shortCode",
+        "label": "简码"
+      },
+      {
+        "prop": "active",
+        "label": "状态"
+      },{
+        "prop": "description",
+        "label": "备注"
+      }
+    ]
+  }
+
+}

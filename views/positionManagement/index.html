@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>仓位管理</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+
+    .el-table--border th:first-child .cell {
+      display: none
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <script src="/settings.js"></script>
+
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <cool-single-view ref="singleView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :buttons="buttons" :single-table-data="singleTableData" :query-condition="queryCondition" :is-methods="isMethods" :dialogs="dialogs"
+      @get-condition="getCondition" @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @table-selection-change="tableSelectionChange" @table-row-click="tableRowClick" @query-btn="searchData" @new-btn="newData"
+      @edit-btn="editData" @delete-btn="deleteData"></cool-single-view>
+    <cool-just-dialog :visible.sync="formDialog.visible" :collapsed.sync="formDialog.collapsed" :fullscreen.sync="formDialog.fullscreen" width="880px" :title="formDialog.title" :show-save-button="true" @closedialog="formDialogClose" @back-event="formDialog.visible = false"
+      @save-event="formDialogSaveEvent">
+      <template slot="dialogSlot">
+        <cool-form-view ref="formItems" :form-items="formItems" @update-form="updateFormItems" size="mini" :inline="true" label-width="80px"></cool-form-view>
+      </template>
+    </cool-just-dialog>
+  </div>
+</body>
+
+</html>

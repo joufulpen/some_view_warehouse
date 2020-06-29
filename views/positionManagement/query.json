@@ -1,0 +1,49 @@
+{
+  "queryCondition": {
+    "whid": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "whid",
+      "tableRelationMode": "AND",
+      "tableName": "[StoreLocation]",
+      "name": "仓库",
+      "form": "select",
+      "options": []
+    },
+    "row": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "row",
+      "tableRelationMode": "AND",
+      "tableName": "[StoreLocation]",
+      "name": "行",
+      "form": "input"
+    },
+    "col": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "col",
+      "tableRelationMode": "AND",
+      "tableName": "[StoreLocation]",
+      "name": "列",
+      "form": "input"
+    },
+    "layer": {
+      "value": "",
+      "mode": "不参与",
+      "modeList": [],
+      "dataType": "string",
+      "fieldName": "layer",
+      "tableRelationMode": "AND",
+      "tableName": "[StoreLocation]",
+      "name": "层",
+      "form": "input"
+    }
+  }
+}

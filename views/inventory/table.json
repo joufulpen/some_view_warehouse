@@ -1,0 +1,59 @@
+{
+  "singleTableData": {
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "label": "序号",
+        "prop": "index",
+        "width": "50px"
+      },
+      {
+        "prop": "kind",
+        "label": "类型"
+      },
+      {
+        "prop": "code",
+        "label": "编码"
+      },
+      {
+        "prop": "materialClass",
+        "label": "大类"
+      },
+      {
+        "prop": "materialSubClass",
+        "label": "小类"
+      },
+      {
+        "prop": "name",
+        "label": "名称"
+      },
+      {
+        "prop": "brandModel",
+        "label": "型号"
+      },
+      {
+        "prop": "specifications",
+        "label": "规格"
+      },
+      {
+        "prop": "pigment",
+        "label": "颜色"
+      },
+      {
+        "prop": "repertoryUnit",
+        "label": "库存单位"
+      },
+      {
+        "prop": "num",
+        "label": "库存数量"
+      }
+    ]
+  }
+
+}

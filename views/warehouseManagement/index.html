@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>仓库管理</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+
+    .el-table--border th:first-child .cell {
+      display: none
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <script src="/settings.js"></script>
+</head>
+
+
+<body>
+  <div id="root" v-cloak>
+    <el-container>
+      <el-header height="auto">
+        <cool-button-group :buttons="buttons" @button-click="buttonsevent"></cool-button-group>
+      </el-header>
+      <el-main>
+        <cool-table-view ref="coolTable" :data="hdrTableData.data" :columns="hdrTableData.columns" :cell-style="hdrTableData.cellStyle" border @table-selection-change="tableSelectionChange" @table-row-click="tableRowClick"></cool-table-view>
+      </el-main>
+    </el-container>
+
+    <cool-just-dialog :visible.sync="formDialog.visible" :collapsed.sync="formDialog.collapsed" :fullscreen.sync="formDialog.fullscreen" width="650px" :title="formDialog.title" :show-save-button="true" @closedialog="formDialogClose" @back-event="formDialog.visible = false"
+      @save-event="formDialogSaveEvent">
+      <template slot="dialogSlot">
+        <cool-form-view ref="formItems" :form-items="formItems" @update-form="updateFormItems" size="mini" :inline="true" label-width="100px"></cool-form-view>
+      </template>
+    </cool-just-dialog>
+  </div>
+
+</body>
+
+</html>

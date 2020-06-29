@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>新建/编辑出仓单</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script src="../../scripts/cool-master/cool-master.js"></script>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <div id="root" v-cloak>
+    <cool-new-edit-views :hdr-header-text="hdrTitle" :form-items="callOutForm" :dlt-header-text="dltTitle" :new-edit-table-data="newEditTableData" @new-edit-table-buttons-event="buttonsevent" @new-edit-select-change="selection" @cancel-click="cancelClick"
+      @maintain-click="keepData" @new-edit-row-dbclick="rowDblclick" :maintain-btn="newEditTableData.data.length == 0? true : false" :label-width="labelWidth"></cool-new-edit-views>
+    <cool-edit-dialog :edit-dialog-title="editDialogTitle" :form-items="formItems" :visible.sync="dialogVisible" :label-width="formLabelWidth" :width="width" @save-event="saveData" @keyup-enter="nextInputData" @keyup-up="backUp" @keyup-down="backDown"></cool-edit-dialog>
+  </div>
+
+</body>
+
+</html>
